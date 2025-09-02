@@ -13,5 +13,5 @@ geode sdk install-binaries -p android32
 geode sdk install-binaries -p android64
 ```
 
-![Example1](./readme_assets/example1.jpg)
-![Example2](./readme_assets/example2.jpg)
+![Example1](./previews/preview-1.png)
+![Example2](./previews/preview-2.png)
