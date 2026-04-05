@@ -1,14 +1,14 @@
 {
-	"geode": "4.8.0",
+	"geode": "5.5.3",
 	"gd": {
-		"win": "2.2074",
-		"android": "2.2074",
-		"ios": "2.2074",
-		"mac": "2.2074"
+		"win": "2.2081",
+		"android": "2.2081",
+		"ios": "2.2081",
+		"mac": "2.2081"
 	},
 	"id": "rainixdev.rainmenu",
 	"name": "Rain Menu",
-	"version": "v1.0.3",
+	"version": "v1.0.4",
 	"developer": "rainixdev",
 	"description": "This is a restored and updated version of one of my first mods. This mod completely transforms the main menu of the game, making it in a rather unusual rainy style.",
 	"links": {

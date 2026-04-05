@@ -397,7 +397,7 @@ class RainMenuLayer : public CCLayer {
 	}
 
 	void onQuit(CCObject*) {
-		CCDirector::get()->end();
+		geode::utils::game::exit(true);
 	}
 
 	void startLightning(float dt) {

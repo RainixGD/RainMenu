@@ -9,14 +9,12 @@ bool FrameAnimatedSprite::initFromPlist(std::string plist) {
         loadedPlists.push_back(plist);
     }
 
-    CCDictionary* dictionary = CCDictionary::createWithContentsOfFileThreadSafe(plist.c_str());
+    CCDictionary* dictionary = CCDictionary::createWithContentsOfFile(plist.c_str());
     CCDictionary* framesDict = (CCDictionary*)dictionary->objectForKey("frames");
     CCDictElement* pElement = NULL;
     animationSprites = CCArray::create();
     animationSprites->retain();
-    CCDICT_FOREACH(framesDict, pElement) {
-        CCDictionary* frameDict = (CCDictionary*)pElement->getObject();
-        std::string frameName = pElement->getStrKey();
+    for (auto [frameName, frameDict] : CCDictionaryExt<std::string, CCDictionary*>(framesDict)){
         CCSpriteFrame* spriteFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(frameName.c_str());
         animationSprites->addObject(spriteFrame);
     }

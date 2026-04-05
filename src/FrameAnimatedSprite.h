@@ -10,7 +10,12 @@ class FrameAnimatedSprite : public CCSprite {
     bool isPlistLoaded(std::string plist);
 
     CCArray* animationSprites;
+
 public:
+    virtual ~FrameAnimatedSprite() {
+        animationSprites->release();
+    }
+
     void restart(float fullAnimationTime);
     void pause();
     void resume();
