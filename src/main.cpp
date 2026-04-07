@@ -4,11 +4,8 @@
 #include "./RainMenuLayer.h"
 
 class $modify(GameManager) {
-	static void onModify(auto& self) {
-		if (Loader::get()->isModLoaded("elnexreal.menuloop_randomizer")) (void) self.setHookPriorityAfterPost("GameManager::getMenuMusicFile", "elnexreal.menuloop_randomizer");
-		else (void) self.setHookPriority("GameManager::getMenuMusicFile", Priority::Replace);
-	}
 	gd::string getMenuMusicFile() {
+		if (Loader::get()->isModLoaded("elnexreal.menuloop_randomizer")) return GameManager::getMenuMusicFile();
 		return gd::string("menuLoop.mp3"_spr);
 	}
 };
